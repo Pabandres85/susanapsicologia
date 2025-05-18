@@ -1,0 +1,625 @@
+/* -------------------- RESET Y BASE -------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.section {
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  background: #f3f4f6;
+}
+
+.hero img {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+/* -------------------- HEADER Y NAV -------------------- */
+header {
+  background: #a78bfa;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  background: #4c1d95;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* -------------------- FORMULARIO -------------------- */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  background-color: #a78bfa;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8b5cf6;
+}
+
+/* -------------------- WHATSAPP -------------------- */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* -------------------- ANIMACIONES -------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------- CHATBOT -------------------- */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.chatbot-toggle {
+  background-color: #a78bfa;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.chatbot-box {
+  display: none;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.chatbot-header {
+  background: #a78bfa;
+  color: white;
+  padding: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chatbot-messages {
+  max-height: 200px;
+  padding: 1rem;
+  font-size: 14px;
+  overflow-y: auto;
+}
+
+.chatbot-messages .bot,
+.chatbot-messages .user {
+  margin-bottom: 0.75rem;
+}
+
+.chatbot-messages .bot {
+  background: #f3f3f3;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.chatbot-messages .user {
+  text-align: right;
+  color: #555;
+}
+
+.chatbot-options {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  gap: 0.5rem;
+}
+
+.chatbot-options button {
+  background-color: #ede9fe;
+  color: #4c1d95;
+  border: 1px solid #c4b5fd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: normal; /* no negrilla */
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.chatbot-options button:hover {
+  font-weight: 600; /* ahora sí se resalta */
+  background-color: #dcd0fa;
+  box-shadow: 0 4px 10px rgba(167, 139, 250, 0.3);
+}
+
+.chatbot-messages a {
+  color: #8b5cf6; /* morado claro */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.chatbot-messages a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- BLOG -------------------- */
+.blog-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.blog-promo {
+  background: linear-gradient(135deg, #ede9fe, #f3e8ff);
+  border: 2px solid #c4b5fd;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 700px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.blog-promo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.blog-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #a78bfa;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.blog-link:hover {
+  background-color: #8b5cf6;
+}
+
+.blog-article {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn {
+  margin-top: 1rem;
+  background: none;
+  color: #6b21a8;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+.article-details {
+  display: none;
+  margin-top: 1rem;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+/* -------------------- SERVICIOS -------------------- */
+.services-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+/* Tarjetas de servicios modernas */
+
+.service-card {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 1rem 1.25rem 2rem;
+  text-align: center;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  border: 2px solid #c4b5fd; /* borde morado suave */
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(167, 139, 250, 0);
+  transition: background 0.4s ease;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.service-card:hover .card-image::after {
+  background: rgba(167, 139, 250, 0.12);
+}
+
+.service-card:hover .card-image img {
+  transform: scale(1.04);
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+/*----serviciospage-------*/
+.service-detail {
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.service-detail img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.service-detail h3 {
+  font-size: 1.5rem;
+  color: #4c1d95;
+  margin-top: 0;
+}
+
+.service-detail p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.service-detail ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-detail ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.service-detail .blog-link {
+  display: inline-block;
+  background-color: #a78bfa;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.service-detail .blog-link:hover {
+  background-color: #8b5cf6;
+}
+
+/*-----------------contactos mas------------------*/
+
+.contact-social {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.contact-method img.contact-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons img {
+  height: 36px;
+  width: 36px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 4px rgba(167, 139, 250, 0.4));
+}
+
+/*-------------responsivehatbot----------*/
+
+@media (max-width: 480px) {
+  .chatbot-box {
+    width: 90vw;
+    right: 5vw;
+    left: 5vw;
+    bottom: 80px; /* para que no quede encima del botón flotante */
+    max-height: 80vh;
+  }
+
+  .chatbot-options button {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .chatbot-header {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .chatbot-messages {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+}
+
+/*-------------sobremi------------------*/
+.cita {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #6b21a8;
+}
+
+.cita span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.especialidades {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.especialidades li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-cv {
+  display: inline-block;
+  background-color: #a78bfa;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.btn-cv:hover {
+  background-color: #8b5cf6;
+}
+
+/*-----trayectoria-----------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #a78bfa;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #4c1d95;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #444;
+}
+
+footer {
+  text-align: center;
+  background: #4c1d95;
+  color: white;
+  padding: 1rem;
+  margin-top: 3rem;
+}

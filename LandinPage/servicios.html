@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servicios | Psicología Integral - Susana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <img src="images/logosusy.png" alt="Logo Susana Psicología Integral" style="height: 100px;">
+    <h1>Maria Susana Hurtado</h1>
+    <p>Psicología Integral</p>
+    <p>| Atención emocional con propósito |</p>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- DETALLE DE SERVICIOS -->
+  <section class="section fade-in" id="servicios">
+    <h2 style="text-align:center;">Nuestros Servicios</h2>
+
+    <!-- Terapia individual -->
+    <div class="card service-detail"  id="terapiaindi">
+      <img src="images/terapindividual.png" alt="Terapia Individual">
+      <h3>Terapia individual</h3>
+      <p>
+        Espacio seguro y confidencial para trabajar temas como ansiedad, estrés, autoestima, duelos, toma de decisiones, manejo emocional y más. Utilizamos enfoques como la terapia cognitivo-conductual, terapia breve y herramientas de psicología positiva.
+      </p>
+      <ul>
+        <li>Sesiones 100% personalizadas</li>
+        <li>Duración: 45-60 minutos</li>
+        <li>Modalidad: presencial y online</li>
+      </ul>
+      <a href="index.html#contacto" class="blog-link">Agendar una cita</a>
+    </div>
+
+    <!-- Terapia de pareja -->
+    <div class="card service-detail" id="terapiapareja">
+      <img src="images/terapipareja.png" alt="Terapia de pareja">
+      <h3>Terapia de pareja</h3>
+      <p>
+        Espacio para parejas que desean mejorar la comunicación, resolver conflictos, fortalecer su vínculo o reconstruir la relación desde el respeto y la empatía.
+      </p>
+      <ul>
+        <li>Orientación objetiva y profesional</li>
+        <li>Trabajo en acuerdos, valores y emociones</li>
+        <li>Sesiones conjuntas e individuales cuando se requiera</li>
+      </ul>
+      <a href="index.html#contacto" class="blog-link">Agendar una cita</a>
+    </div>
+
+    <!-- Consultas online -->
+    <div class="card service-detail" id="consultonli">
+      <img src="images/consultonline.png" alt="Consultas Online">
+      <h3>Consultas online</h3>
+      <p>
+        Atención psicológica desde la comodidad de tu hogar. Ideal para quienes viven fuera de la ciudad, tienen dificultades para desplazarse o prefieren la virtualidad.
+      </p>
+      <ul>
+        <li>Videollamadas seguras y confidenciales</li>
+        <li>Horarios flexibles</li>
+        <li>Plataformas: Meet, Zoom o WhatsApp</li>
+      </ul>
+      <a href="index.html#contacto" class="blog-link">Agendar una cita</a>
+    </div>
+
+    <!-- Talleres de psicoeducación -->
+    <div class="card service-detail" id="tallerespisco">
+      <img src="images/tallerespisco.png" alt="Talleres psicoeducativos">
+      <h3>Talleres de psicoeducación</h3>
+      <p>
+        Espacios grupales para aprender sobre emociones, autocuidado, manejo de estrés, comunicación asertiva, crianza respetuosa, salud mental en el trabajo, entre otros temas.
+      </p>
+      <ul>
+        <li>Dirigido a grupos, colegios, empresas y comunidad</li>
+        <li>Modalidad presencial y virtual</li>
+        <li>Enfoque participativo y experiencial</li>
+      </ul>
+      <a href="index.html#contacto" class="blog-link">Solicitar información</a>
+    </div>
+  </section>
+
+  <!-- CHATBOT -->
+<div id="chatbot-placeholder"></div>
+<script>
+  fetch("chatbot/chatbot.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("chatbot-placeholder").innerHTML = html;
+      const script = document.createElement("script");
+      script.src = "scripts/chatbot.js";
+      document.body.appendChild(script);
+    });
+</script>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Maria Susana Hurtado - Psicología Integral</p>
+  </footer>
+
+</body>
+</html>
+

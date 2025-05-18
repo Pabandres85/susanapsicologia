@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maria Susana Hurtado | Psicología Integral</title>
+
+  <!-- Fuente y estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <img src="images/logosusy.png" alt="Logo Susana Psicología Integral" style="height: 100px;">
+    <h1>Maria Susana Hurtado</h1>
+    <p>Psicología Integral</p>
+    <p>| Atención emocional con propósito |</p>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN HERO -->
+  <section class="hero fade-in">
+    <img src="images/susana.jpg" alt="Foto de Susana">
+    <h1>Transforma tu vida desde el interior</h1>
+    <p>Sesiones presenciales y online. Especialista en ansiedad, depresión, autoestima y relaciones.</p>
+  </section>
+
+    <!-- SOBRE MÍ -->
+  <section class="section about fade-in" id="sobre-mi">
+  <h2>Sobre mí</h2>
+  <div class="card">
+    <blockquote class="cita">
+      "Acompañar procesos humanos con empatía es más que una vocación, es un compromiso con el alma."
+      <span>– Susana Hurtado</span>
+    </blockquote>
+    <p>
+      Soy Susana, psicóloga clínica con más de 10 años de experiencia. Me especializo en el acompañamiento de procesos emocionales con herramientas terapéuticas efectivas, buscando siempre el bienestar de mis pacientes. Mi enfoque combina ciencia y empatía para lograr cambios reales y sostenibles.
+    </p>
+    <ul class="especialidades">
+      <li>🧘‍♀️ Terapia emocional individual</li>
+      <li>💬 Escucha activa y acompañamiento</li>
+      <li>👨‍👩‍👧‍👦 Terapia familiar y de pareja</li>
+      <li>🧩 Enfoque cognitivo-conductual</li>
+      <li>🌐 Consultas online seguras</li>
+    </ul>
+    <a href="trayectoria.html" class="btn-cv" target="_blank">Ver hoja de vida completa →</a>
+  </div>
+</section>
+
+
+
+  <!-- SERVICIOS -->
+<section class="section services fade-in" id="servicios">
+  <h2>Servicios</h2>
+  <div class="services-grid">
+    
+    <a href="servicios.html#terapiaindi" class="card service-card">
+      <div class="card-image">
+        <img src="images/terapindividual.png" alt="Terapia individual">
+      </div>
+      <h3>Terapia individual</h3>
+      <p>Atención personalizada para adultos, con enfoque cognitivo-conductual y terapia breve.</p>
+    </a>
+
+    <a href="servicios.html#terapiapareja" class="card service-card">
+      <div class="card-image">
+        <img src="images/terapipareja.png" alt="Terapia de pareja">
+      </div>
+      <h3>Terapia de pareja</h3>
+      <p>Fortalece la comunicación, vínculos afectivos y gestión emocional en tu relación.</p>
+    </a>
+
+    <a href="servicios.html#consultonli" class="card service-card">
+      <div class="card-image">
+        <img src="images/consultonline.png" alt="Consultas Online">
+      </div>
+      <h3>Consultas online</h3>
+      <p>Sesiones seguras y confidenciales desde la comodidad de tu hogar.</p>
+    </a>
+
+    <a href="servicios.html#tallerespisco" class="card service-card">
+      <div class="card-image">
+        <img src="images/tallerespisco.png" alt="Talleres Psicoeducación">
+      </div>
+      <h3>Talleres de psicoeducación</h3>
+      <p>Espacios grupales para aprender sobre emociones, autocuidado y salud mental.</p>
+    </a>
+
+  </div>
+</section>
+
+
+  <!-- Blog -->
+<section class="section blog-preview fade-in" id="blog">
+  <div class="card blog-promo">
+    <h2>🌱 <strong>Explora nuestro Blog</strong></h2>
+    <p>Encuentra reflexiones, herramientas y consejos para tu bienestar emocional, desde la voz profesional de Maria Susana Hurtado.</p>
+    <a href="blog.html" class="blog-link">Ir al Blog →</a>
+  </div>
+</section>
+
+
+
+  <!-- CONTACTO -->
+  <section class="section contact fade-in" id="contacto">
+    <h2>Contacto</h2>
+    <div class="card">
+      <form onsubmit="return enviarCorreo();">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+    <hr style="margin: 2rem 0;">
+
+<div class="contact-social">
+  <h3>También puedes contactarme en:</h3>
+  
+  <div class="contact-method">
+    <img src="images/gmail-Logo.png" alt="Gmail" class="contact-icon">
+    <a href="mailto:susana.hurtado.psi@gmail.com">susana.hurtado.psi@gmail.com</a>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://wa.me/573136456560" target="_blank" title="WhatsApp">
+      <img src="images/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.instagram.com/susana.psi" target="_blank" title="Instagram">
+      <img src="images/instagram-icon.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/susana.psi" target="_blank" title="Facebook">
+      <img src="images/facebook-icon.png" alt="Facebook">
+    </a>
+    <a href="https://www.linkedin.com/in/susana-hurtado" target="_blank" title="LinkedIn">
+      <img src="images/linkedin-icon.png" alt="LinkedIn">
+    </a>
+  </div>
+</div>
+
+  </section>
+
+  <!-- CHATBOT -->
+<div id="chatbot-placeholder"></div>
+<script>
+  fetch("chatbot/chatbot.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("chatbot-placeholder").innerHTML = html;
+      const script = document.createElement("script");
+      script.src = "scripts/chatbot.js";
+      document.body.appendChild(script);
+    });
+</script>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Maria Susana Hurtado - Psicología Integral</p>
+  </footer>
+
+  <script src="scripts/contacto.js"></script>
+
+</body>
+</html>
+
+
+
