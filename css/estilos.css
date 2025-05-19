@@ -95,6 +95,18 @@ button:hover {
   background-color: #8b5cf6;
 }
 
+a, button {
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #a78bfa;
+  outline: none;
+  box-shadow: 0 0 5px rgba(167, 139, 250, 0.4);
+}
+
+
+
 /* -------------------- WHATSAPP -------------------- */
 .whatsapp {
   position: fixed;
@@ -129,6 +141,12 @@ button:hover {
     transform: translateY(0);
   }
 }
+
+.logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
 
 /* -------------------- CHATBOT -------------------- */
 
@@ -352,8 +370,8 @@ button:hover {
 }
 
 /* Tarjetas de servicios modernas */
-
 .service-card {
+  display: block;
   border: 2px solid transparent;
   border-radius: 16px;
   padding: 1rem 1.25rem 2rem;
@@ -363,12 +381,14 @@ button:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
+  color: inherit;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-  border: 2px solid #c4b5fd; /* borde morado suave */
+  border: 2px solid #c4b5fd; /* morado suave */
 }
 
 .card-image {
@@ -405,19 +425,20 @@ button:hover {
   transform: scale(1.04);
 }
 
-.service-card h3 {
-  font-size: 1.1rem;
-  margin-top: 1.2rem;
-  font-weight: 600;
+.service-card h3,
+.service-card p {
+  text-decoration: none;
   color: #333;
 }
 
-.service-card p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-  margin-top: 0.5rem;
+.service-card:hover h3 {
+  color: #7c3aed;
 }
+
+.service-card:hover p {
+  color: #6b7280;
+}
+
 
 /*----serviciospage-------*/
 .service-detail {
