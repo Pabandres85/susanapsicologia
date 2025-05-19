@@ -133,7 +133,7 @@
 
 
   <!-- Testimonios-->
-<section class="testimonios section" id="testimonios">
+<section class="testimonios section fade-in" id="testimonios">
   <h2>Lo que dicen mis pacientes</h2>
   <div class="card">
     <p>“La atención con Susana me ayudó a reencontrarme conmigo misma.”</p>
@@ -221,6 +221,29 @@
       document.body.appendChild(script);
     });
 </script>
+
+<!-- cambio page -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const faders = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Evita que se repita
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    faders.forEach(fader => {
+      observer.observe(fader);
+    });
+  });
+</script>
+
 
   <!-- FOOTER -->
   <footer>

@@ -1,6 +1,11 @@
 function toggleChat() {
   const chatBox = document.getElementById("chatBox");
   chatBox.style.display = chatBox.style.display === "block" ? "none" : "block";
+
+  // Hacer scroll al inicio cuando se abre el chat
+  if (chatBox.style.display === "block") {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 
 function responder(pregunta) {
@@ -48,4 +53,8 @@ document.addEventListener("click", function (event) {
   ) {
     chatBox.style.display = "none";
   }
+});
+
+document.getElementById('chatbot-icon').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });

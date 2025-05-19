@@ -16,6 +16,26 @@ body {
   margin: auto;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /*----------hero--------*/
 
 /* HERO SECCIÓN */
@@ -338,11 +358,55 @@ input:focus, textarea:focus {
   }
 }
 
+@keyframes bounce-up {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.emoji-top {
+  animation: bounceArrow 1.8s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+/* Combina ambas animaciones */
+
+.chatbot-toggle {
+  background: radial-gradient(circle at center, #fdfbff 40%, #a78bfa 100%);
+  color: #4c1d95;
+  border: none;
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  animation: pulse-glow 2.5s infinite ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  position: relative;
+}
+
+.chatbot-toggle .emoji-top {
+  font-size: 18px;
+  margin-left: 2px;
+}
+
+
 .chatbot-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999;
+  bottom: 80px;
 }
 
 
@@ -356,7 +420,7 @@ input:focus, textarea:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   position: relative;
-  animation: pulse-glow 2.5s infinite ease-in-out;
+  animation: pulse-glow 1.5s infinite ease-in-out;
 }
 
 
@@ -698,6 +762,18 @@ input:focus, textarea:focus {
     bottom: 80px; /* para que no quede encima del botón flotante */
     max-height: 80vh;
   }
+
+  @media (max-width: 480px) {
+  .chatbot-toggle {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .chatbot-toggle span {
+    font-size: 10px;
+  }
+}
+
 
   .chatbot-options button {
     font-size: 0.85rem;
