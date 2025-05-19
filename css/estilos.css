@@ -131,6 +131,19 @@ button:hover {
 }
 
 /* -------------------- CHATBOT -------------------- */
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(167, 139, 250, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0);
+  }
+}
+
 .chatbot-container {
   position: fixed;
   bottom: 20px;
@@ -138,7 +151,7 @@ button:hover {
   z-index: 999;
 }
 
-.chatbot-toggle {
+/* .chatbot-toggle {
   background-color: #a78bfa;
   color: white;
   border: none;
@@ -147,7 +160,21 @@ button:hover {
   font-size: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   cursor: pointer;
+} */
+
+.chatbot-toggle {
+  background-color: #a78bfa;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  animation: pulse-glow 2.5s infinite ease-in-out;
 }
+
 
 .chatbot-box {
   display: none;
@@ -566,7 +593,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito', sans-serif;
   background: #f9f9f9;
   color: #333;
 }
@@ -623,3 +650,76 @@ footer {
   padding: 1rem;
   margin-top: 3rem;
 }
+/*-------------navbase-------------*/
+
+.navegacion-principal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+/* 
+.nav-box {
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  background-color: white;
+  border: 1.5px solid #a78bfa;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #6b21a8;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-box:hover {
+  background-color: #a78bfa;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(167, 139, 250, 0.3);
+}
+*/
+.nav-box {
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(135deg, #ede9fe, #f3e8ff);
+  border: 1.5px solid #d8b4fe;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #6b21a8;
+  font-weight: 500;
+  transition: all 0.35s ease;
+  box-shadow: 0 3px 6px rgba(167, 139, 250, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #a78bfa;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 0;
+}
+
+.nav-box:hover::before {
+  opacity: 1;
+}
+
+.nav-box:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(167, 139, 250, 0.3);
+}
+
+.nav-box span {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-box:focus {
+  outline: none;
+} 

@@ -6,7 +6,7 @@
   <title>Maria Susana Hurtado | Psicología Integral</title>
 
   <!-- Fuente y estilos -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -14,14 +14,25 @@
   <!-- ENCABEZADO -->
   <header>
     <img src="images/logosusy.png" alt="Logo Susana Psicología Integral" style="height: 100px;">
+    <meta name="description" content="Psicóloga clínica especializada en salud emocional, terapia individual, de pareja y talleres de psicoeducación.">
+    <meta name="keywords" content="psicología, salud mental, terapia individual, terapia de pareja, psicoeducación, Susana Hurtado">
+    <meta name="author" content="Maria Susana Hurtado">
+    <meta property="og:title" content="Susana Psicología Integral">
+    <meta property="og:description" content="Atención emocional con propósito: conoce los servicios psicológicos ofrecidos por Susana.">
+    <meta property="og:image" content="images/logosusy.png">
+    <meta property="og:url" content="https://pabandres85.github.io/susanapsicologia/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <h1>Maria Susana Hurtado</h1>
     <p>Psicología Integral</p>
     <p>| Atención emocional con propósito |</p>
     <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#blog">Blog</a>
-      <a href="#contacto">Contacto</a>
+       <div class="navegacion-principal">
+          <a href="#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
+          <a href="#servicios" class="nav-box"><span>Servicios</span></a>
+          <a href="trayectoria.html" class="nav-box"><span>Trayectoria</span></a>
+          <a href="#blog" class="nav-box"><span>Blog</span></a>
+          <a href="#contacto" class="nav-box"><span>Contacto</span></a>
+        </div>
     </nav>
   </header>
 
@@ -110,7 +121,12 @@
 
   <!-- CONTACTO -->
   <section class="section contact fade-in" id="contacto">
+   
     <h2>Contacto</h2>
+
+   <hr style="margin: 2rem 0;">
+    
+  <h3>Puedes contactarme escribiendome:</h3>
     <div class="card">
       <form onsubmit="return enviarCorreo();">
         <label for="nombre">Nombre:</label><br>
@@ -127,14 +143,8 @@
 
     <hr style="margin: 2rem 0;">
 
-<div class="contact-social">
-  <h3>También puedes contactarme en:</h3>
-  
-  <div class="contact-method">
-    <img src="images/gmail-Logo.png" alt="Gmail" class="contact-icon">
-    <a href="mailto:susana.hurtado.psi@gmail.com">susana.hurtado.psi@gmail.com</a>
-  </div>
-
+    <h3>O contactame a través de:</h3>
+     
   <div class="social-icons">
     <a href="https://wa.me/573136456560" target="_blank" title="WhatsApp">
       <img src="images/whatsapp-icon.png" alt="WhatsApp">
@@ -149,7 +159,14 @@
       <img src="images/linkedin-icon.png" alt="LinkedIn">
     </a>
   </div>
+  <div class="contact-method">
+    <img src="images/gmail-Logo.png" alt="Gmail" class="contact-icon">
+    <a href="mailto:susana.hurtado.psi@gmail.com">susana.hurtado.psi@gmail.com</a>
+    </div>
 </div>
+
+<div class="contact-social">
+
 
   </section>
 
