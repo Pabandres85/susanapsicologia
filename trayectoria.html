@@ -2,6 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="description" content="Psicóloga clínica especializada en salud emocional, terapia individual, de pareja y talleres de psicoeducación.">
+  <meta name="keywords" content="psicología, salud mental, terapia individual, terapia de pareja, psicoeducación, Susana Hurtado">
+  <meta name="author" content="Maria Susana Hurtado">
+  <meta property="og:title" content="Susana Psicología Integral">
+  <meta property="og:description" content="Atención emocional con propósito: conoce los servicios psicológicos ofrecidos por Susana.">
+  <meta property="og:image" content="images/logosusy.png">
+  <meta property="og:url" content="https://pabandres85.github.io/susanapsicologia/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <img src="images/logosusy.png" alt="Logo Susana Psicología Integral" style="height: 100px;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Trayectoria Profesional - Maria Susana Hurtado</title>
   <link rel="stylesheet" href="css/estilos.css">
@@ -51,6 +61,19 @@
       </p>
     </section>
   </main>
+
+  <!-- CHATBOT -->
+<div id="chatbot-placeholder"></div>
+<script>
+  fetch("chatbot/chatbot.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("chatbot-placeholder").innerHTML = html;
+      const script = document.createElement("script");
+      script.src = "scripts/chatbot.js";
+      document.body.appendChild(script);
+    });
+</script>
 
   <!-- PIE DE PÁGINA -->
   <footer>
